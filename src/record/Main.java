@@ -20,7 +20,7 @@ public class Main {
 		
 		manager.addResultToStudent(1, new Result(1, "Maths", 90));
 		manager.addResultToStudent(1, new Result(1, "Science", 85));
-		
+		manager.viewStudents();
 		
 
 	}

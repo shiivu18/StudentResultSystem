@@ -14,7 +14,10 @@ public class Student {
 		
 		@Override
 		public String toString() {
-			return "student [id=" + id + ", name=" + name + ", age=" + age + "]";
+			return "Student [name=" +name +
+					", age " +age +
+					", id= " +id +
+					",Total Mrks" +gettotalmarks() + "]" ;
 		}
 
 		public Student(int id, String name, int age) {
@@ -49,8 +52,16 @@ public class Student {
 		}
 
 		public void addResult(Result result) {
-			// TODO Auto-generated method stub
+			results.add(result);
+		}
+		
+		public int gettotalmarks() {
+			int Total =0;
 			
+			for(Result r: results) {
+				Total +=r.getMarks();
+			}
+			return Total;
 		}
 		
 
