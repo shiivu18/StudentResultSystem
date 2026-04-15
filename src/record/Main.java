@@ -6,7 +6,7 @@ public class Main {
 		
 		StudentManager manager =new StudentManager();
 		
-		manager.addStudent(new Student(1,"shivu",19));
+		manager.addStudent(new Student(1,"shivu",19)); 
 		manager.addStudent(new Student(2,"karan",26));
 		manager.addStudent(new Student(3,"aujla",28));
 		
