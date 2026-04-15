@@ -3,9 +3,30 @@ package record;
 import java.util.ArrayList;
 import java.util.List;
 
+import Studentmanage.Result;
+
 public class Student {
 	
 	   private List<Result> results =new ArrayList<Result>();
+	   
+	   public void addresults(Result r) {
+			results.add(r);
+		}
+		
+		public String getGrade() {
+
+		    int total = getTotalMarks();
+
+		    if (total >= 90) {
+		        return "A";
+		    } else if (total >= 75) {
+		        return "B";
+		    } else if (total >= 50) {
+		        return "C";
+		    } else {
+		        return "Fail";
+		    }
+		}
 
 		
 		private int id;
