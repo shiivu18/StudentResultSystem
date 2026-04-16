@@ -84,22 +84,7 @@ public class StudentManager {
         System.out.println("Topper is: " + topper);
     }
     
-    public void saveToFile() {
-
-        try {
-            FileWriter writer = new FileWriter("students.txt");
-
-            for (Student s : students) {
-                writer.write(s.toString() + "\n");
-            }
-
-            writer.close();
-            System.out.println("Data saved to file");
-
-        } catch (IOException e) {
-            System.out.println("Error saving file");
-        }
-    }
+  
     
     public void loadFromFile() {
 
@@ -107,7 +92,7 @@ public class StudentManager {
             BufferedReader reader = new BufferedReader(new FileReader("students.txt"));
 
             String line;
-
+ 
             while ((line = reader.readLine()) != null) {
 
                 String[] parts = line.split(",");
@@ -116,7 +101,7 @@ public class StudentManager {
                 String name = parts[1];
                 int age = Integer.parseInt(parts[2]);
 
-                std.add(new Student(id, name, age));
+                students.add(new Student(id, name, age));
             }
 
             reader.close();
