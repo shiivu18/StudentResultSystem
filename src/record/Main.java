@@ -26,6 +26,10 @@ public class Main {
 		manager.getTopper();
 
         manager.loadFromFile();
+        StudentManager manager1 = new StudentManager();
+        manager1.loadFromFile();  
+        manager1.viewStudents();
+        manager1.saveToFile();     
 
 	}
 

@@ -111,4 +111,35 @@ public class StudentManager {
             System.out.println("Error loading file");
         }
     }
+    
+    public void saveToFile() {
+
+        try {
+            FileWriter writer = new FileWriter("students.txt");
+
+            for (Student s : students) {
+                writer.write(s.toString() + "\n");
+            }
+
+            writer.close();
+            System.out.println("Data saved to file");
+
+        } catch (IOException e) {
+            System.out.println("Error saving file");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
