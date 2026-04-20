@@ -82,7 +82,17 @@ public class StudentManager {
         System.out.println("Students sorted by marks");
     }
     
-    
+    public void getTopper() {
+
+        if (students.isEmpty()) {
+            System.out.println("No students found!");
+            return;
+        }
+
+        Student topper = students.get(0); // after sorting
+
+        System.out.println("Topper is: " + topper);
+    }
     
   
     
