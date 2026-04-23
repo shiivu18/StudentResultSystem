@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import record.*;
 
 public class Main {
 
@@ -15,7 +16,9 @@ public class Main {
             System.out.println("2. View Students");
             System.out.println("3. Delete Student");
             System.out.println("4. Add Result");
-            System.out.println("5. Exit");
+            System.out.println("5. Sort by Marks");
+            System.out.println("6. Show Topper");
+            System.out.println("7. Exit");
 
             int choice = sc.nextInt();
 
@@ -60,8 +63,17 @@ public class Main {
                     break;
 
                 case 5:
+                    manager.sortStudentsByMarks();
+                    break;
+
+                case 6:
+                    manager.getTopper();
+                    break;
+
+                case 7:
                     manager.saveToFile();
                     System.out.println("Exiting...");
+                    sc.close();
                     return;
 
                 default:
