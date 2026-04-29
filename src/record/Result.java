@@ -2,9 +2,7 @@ package record;
 
 public class Result {
 
-    private int studentId;
-    private String subject;
-    private int marks;
+   
 
     public Result(int studentId, String subject, int marks) {
         this.studentId = studentId;
